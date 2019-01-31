@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Hola David, espero que este ejemplo te ayude! Esto es un comento en el HTML de Brad
+
+    Hize esto porque me pediste mandarte una programa simple de html, css y javascript, para ver como es.
+    Me pediste indicar como actua y cambia con Javascript y lo hize con "comments" o
+    comentarios en el documento aqui :)
+
+    Puedes abrir este documento en un browser / navegador y hacer click a los botones para ver lo
+    que pasa y como funciona
+
+    Te ajunte fotos por si no tienes navegador,
+
+    paso1.png es antes de hacer ningun click
+
+    paso2.png es despues de hacer click al boton que dice "prefiero azul" este boton llama el codigo o actualiza
+    el function / mandado de hazSaludoAzul, que cambien el CSS del pagina (el color del saludo)
+
+    paso3.png es despues de hacer click al boton que dice "prefiero rojo" este boton llama el codigo o actualiza
+    el function / mandado de hazSaludoRojo, que cambien el CSS del pagina (el color del saludo)
+
+    paso4.png es despues de hacer click al boton que dice "adios" este boton llama el codigo o actualiza
+    el function / mandado de hazAdios, que cambien el HTML del pagina (las letras del saludo)
+
+    -->
+
+
+    <style>
+        /* eso es como se hace un comento en CSS */
+        /* aqui empieza el css */
+        /* hay dos estilos o clases que declaramos: */
+
+         /* 1) estilo_azul, el color de las letras es azul, y el color del fondo es rosa claro  */
+        .estilo_azul{color: blue; background-color: lightpink}
+
+        /* 2) estilo_rojo, el color de las letras es rojo, y el color del fondo es verde amarillo  */
+        .estilo_rojo{color: red; background: greenyellow}
+        /* aqui termina el css */
+    </style>
+
+    <script>
+        /* eso es como se hace un comento en Javascript
+        aqui empieza el Javascript */
+
+        /* un "function" es como un mandado que puedes llamar tantas veces que quiras.
+        aqui declaramos 3 "functions"
+         */
+        function hazSaludoAzul() {
+            /* 1) este "function agarra un elemento que tiene el "id" o "#" llamado "saludo"
+             * y cambien el clase o el estilo / CSS a estilo_azul
+             *
+             * "document" es documento
+             * "get" significa conseguir o agarrar
+             * "Element" es elemento
+             * "By" es como por
+             * "Id" es el id, a veces en css se refiera al id con el symbolo #
+             * "saludo" refiere del id="saludo" en el HTML
+             * "className" significa nobre del clase / estilo
+             *
+             * en otras palabras dice: consegui el elemento en el documento con el id/# "saludo"
+             * y pon 'estilo_azul' como el nombre de su clase de CSS
+             *
+             * en otro codigo tuyo has puesto tu mismo el clase, por elemeplo
+             * cuando pusiste "<img class="telefono"
+             *
+             * con este funcion ponemos <h1 class="estilo_azul"
+             *
+             * */
+            document.getElementById('saludo').className = 'estilo_azul';
+        }
+
+        function hazSaludoRojo() {
+            /* 2) este function es muy similar al hazSaludoAzul*/
+            document.getElementById('saludo').className = 'estilo_rojo';
+        }
+
+        function hazAdios() {
+            /* 3) este function aggara o consigue el elemento y cambie el
+            * texto que esta el el elemento */
+            document.getElementById('saludo').innerText = 'Adios!';
+        }
+
+    </script>
+
+</head>
+<body>
+    <h1 id="saludo">Hola, espero que tengas un lindo dia!</h1>
+
+    <!-- las palabras "on click" significa "cuando hace click"
+
+
+     significa que cuando hace click va a relizar o ejecutar el javascript
+     que escribimos ariba, hazSaludoAzul
+
+     onclick="ejectua el javascript con que mencione aqui">
+
+
+     -->
+
+    <button onclick="hazSaludoAzul()">prefiero azul</button>
+
+    <button onclick="hazSaludoRojo()">prefiero rojo</button>
+
+    <button onclick="hazAdios()">adios</button>
+
+    <!-- espero que eso te ha ayudado! gracias por tu ultima carta!
+    dime si tienes otras preguntas! y que sigues aprendiendo bastante! -->
+</body>
+</html>
